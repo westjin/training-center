@@ -1,0 +1,24 @@
+x, y, z = map(int,input().split(" ")) # 공백으로 구분된 데이터의 개수가 많지 않다면! map(int, input().split(" ")) 이용
+
+
+b = input().split(" ")
+
+
+b.sort(reverse = True)
+largest = int(b[0])
+
+res = 0
+count = 0
+
+for i in range(y):
+    if count <= 2:
+        res += largest
+        count += 1
+
+    else:
+        res += int(b[1])
+        count = 0
+
+
+print(res)
+
