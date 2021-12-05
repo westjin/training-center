@@ -1,0 +1,21 @@
+n, k = map(int, input().split(" "))
+
+count = 0
+
+
+#가장 빠른 길을 찾으려면 최대한 많이 나누는것이다. 
+while n >= k:
+    while n % k != 0:
+        n -= 1
+        count += 1
+    n /= k
+    count += 1
+
+#k 보다는 작고 1보다 큰 경우
+while n > 1:
+    n -= 1
+    count += 1
+
+
+
+print(count)
