@@ -1,0 +1,11 @@
+n, m = map(int, input().split(" "))
+
+result = 0
+
+
+for i in range(n):
+    data = list(map(int, input().split(" ")))  #입력을 위한 전형적인 소스코드
+    min_value = min(data)     #가장 작은 수의 값을 저장
+    result = max(result, min_value) # result와 비교하여 result에 값저장
+ # 반복되는 비교
+print(result)
